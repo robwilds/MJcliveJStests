@@ -15,15 +15,16 @@ function extractParts(data) {
   var documents = data.documents;
   console.log("Stage 1");
   console.log(documents[0].tables.records[0]);
-
-  for (var i = 0; i < documents.length; i++) {
+  console.log("record length is " + String(documents[0].tables.records.length));
+  console.log("moving to stage 2\n");
+  for (var i = 0; i < documents[0].tables.records.length; i++) {
     //for (var doc of documents) {
-    console.log("Stage 2 documents count is " + i);
-    var tables = documents.tables;
-    console.log(tables);
+    console.log("Stage 2 documents count is " + String(i + 1));
+    //var tables = documents.tables;
+    //console.log(tables);
     //  var tables = doc.tables;
     // for (var j = 0; j < tables.length; j++) {
-    console.log("Stage 3 tables");
+    //console.log("Stage 3 tables");
     //var records = []; //tables.records;
     //records = tables.records;
     //console.log(tables.records[0]);
